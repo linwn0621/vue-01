@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入vue -->
+    <script src="./node_modules/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        {{msg}}
+
+        <first>
+        </first>
+    </div>
+    
+
+    <script>
+        // 创建全局组件
+        Vue.component("first", {
+            template: ` <div style="color:red">11</div>`
+        })
+
+
+
+        //  创建实例
+        var vm = new new Vue({
+            el: "#app",
+            data() {
+                return {
+                    msg: "你好"
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
